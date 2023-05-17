@@ -1,4 +1,3 @@
-// 'use client'
 import React from 'react'
 import { Button } from '@mui/material'
 
@@ -9,7 +8,7 @@ interface Props {
 
 const MuiButton = ({ children, onClick }: Props) => {
   return (
-    <Button variant="contained" onClick={onClick}>
+    <Button variant="outlined" onClick={onClick}>
       {children}
     </Button>
   )
