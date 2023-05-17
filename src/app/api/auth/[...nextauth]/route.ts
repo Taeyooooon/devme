@@ -7,10 +7,24 @@ export const authOptions: NextAuthOptions = {
     GoogleProvider({
       clientId: process.env.GOOGLE_OAUTH_ID || '',
       clientSecret: process.env.GOOGLE_OAUTH_SECRET || '',
+      authorization: {
+        params: {
+          prompt: 'consent',
+          access_type: 'offline',
+          response_type: 'code',
+        },
+      },
     }),
     GitHubProvider({
       clientId: process.env.GITHUB_OAUTH_ID || '',
       clientSecret: process.env.GITHUB_OAUTH_SECRET || '',
+      authorization: {
+        params: {
+          prompt: 'consent',
+          access_type: 'offline',
+          response_type: 'code',
+        },
+      },
     }),
   ],
   callbacks: {

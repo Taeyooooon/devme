@@ -10,7 +10,7 @@ const Nav = () => {
   const user = session?.user
 
   return (
-    <section className="flex justify-between border border-neutral-500">
+    <section className="flex justify-between items-center border border-neutral-500">
       <Link href={'/'}>
         <h1>Devme</h1>
       </Link>
