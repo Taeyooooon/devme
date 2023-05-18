@@ -14,6 +14,7 @@ module.exports = {
         support3: '#514C66',
         accent: '#2E2C3A',
         trans: '#2A2735B2',
+        github: '#333333',
       },
       textColor: {
         primary: '#B79494',
