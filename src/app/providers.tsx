@@ -2,6 +2,7 @@
 
 import React from 'react'
 import { CssBaseline, StyledEngineProvider, ThemeProvider, createTheme } from '@mui/material'
+import AuthContext from '@/context/AuthContext'
 
 const Providers = ({ children }: { children: React.ReactNode }) => {
   let rootElement
@@ -36,10 +37,12 @@ const Providers = ({ children }: { children: React.ReactNode }) => {
   return (
     <>
       <StyledEngineProvider injectFirst>
-        <ThemeProvider theme={theme}>
-          <CssBaseline />
-          {children}
-        </ThemeProvider>
+        <AuthContext>
+          <ThemeProvider theme={theme}>
+            <CssBaseline />
+            {children}
+          </ThemeProvider>
+        </AuthContext>
       </StyledEngineProvider>
     </>
   )
