@@ -2,6 +2,7 @@ import React from 'react'
 import { Inter } from 'next/font/google'
 import '../styles/globals.css'
 import Providers from './providers'
+import Nav from '@/components/Nav'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -16,6 +17,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body className={inter.className}>
         <div id="__next">
           <Providers>
+            <header>
+              <Nav />
+            </header>
             <main>{children}</main>
           </Providers>
         </div>
